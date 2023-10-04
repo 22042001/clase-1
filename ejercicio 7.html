@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <center><h1>Juego de adiviniar letras del abecedario </h1></center>
+</body>
+</html>
+
+<script>
+    // este juego adivina las letras del abecedario en 3 intentos
+    function salto_de_linea (){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostrarMensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+    let letras = "a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, y, z"
+    let letras_adivinar = letras.charAt(Math.floor(Math.random() * 27))
+    let intentos = 3
+    let contador = 1 
+
+    while(contador <= intentos){
+        let letras_intr = prompt("ingrese una letra del abecedario: ")
+
+        if (letras_intr == letras_adivinar){
+            alert ("adivinaste en el intento numero: " + contador + "la letra: " + letras_adivinar)
+            break
+        }else{
+            alert ("Perdedor, intento nuemro: " + contador)
+        }
+        contador++
+    }
+    alert("fin del juego")
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Inserción en Array</title>
+</head>
+<body>
+    <center><h1>Inserción de Elementos en un Array</h1></center>
+</body>
+</html>
+
+<script>
+    function salto_de_linea (){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostrarMensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+    let nombres = [] 
+    let cantidad = parseInt(prompt("¿Cuántos nombres desea insertar?"))
+    let contador = 1
+
+    while(contador <= cantidad){
+        let nombre = prompt("Nombre " + contador)
+        nombres.push(nombre) 
+        contador++
+    }
+
+    console.log(nombres) 
+</script>
